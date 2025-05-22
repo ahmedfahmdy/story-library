@@ -17,7 +17,7 @@
     }
   </script>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-sans">
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-sans min-h-screen flex flex-col">
   <!-- الشعار والعنوان -->
   <header class="bg-gray-800 text-white py-4">
     <div class="container mx-auto px-4 flex justify-between items-center">
@@ -34,27 +34,18 @@
   </nav>
 
   <!-- المحتوى الرئيسي -->
-  <main class="container mx-auto p-4 max-w-xl">
-    <h2 class="text-2xl font-bold mb-4 text-center">📩 تواصل معنا</h2>
-    <form action="https://formspree.io/f/mqaqoddg" method="POST" class="bg-white dark:bg-gray-800 shadow rounded p-6 space-y-4">
-  <div>
-    <label for="name" class="block mb-1">الاسم</label>
-    <input type="text" id="name" name="name" required class="w-full p-2 rounded border border-gray-300 dark:border-gray-700 dark:bg-gray-900">
-  </div>
-  <div>
-    <label for="email" class="block mb-1">البريد الإلكتروني</label>
-    <input type="email" id="email" name="_replyto" required class="w-full p-2 rounded border border-gray-300 dark:border-gray-700 dark:bg-gray-900">
-  </div>
-  <div>
-    <label for="message" class="block mb-1">الرسالة</label>
-    <textarea id="message" name="message" rows="4" required class="w-full p-2 rounded border border-gray-300 dark:border-gray-700 dark:bg-gray-900"></textarea>
-  </div>
-  <button type="submit" class="bg-gray-800 text-white py-2 px-4 rounded hover:bg-gray-700 transition">إرسال</button>
-</form>
+  <main class="container mx-auto p-4 max-w-3xl flex-grow">
+    <h2 class="text-2xl font-bold mb-4 text-center">📬 تواصل معنا</h2>
+    <p class="text-lg leading-relaxed bg-white dark:bg-gray-800 p-6 rounded shadow text-center">
+      يمكنك التواصل معنا مباشرة من خلال البريد الإلكتروني التالي، وسنرد عليك في أقرب وقت ممكن.
+    </p>
+    <div class="mt-6 text-center">
+      <a href="mailto:ahmedhamdy7152@gmail.com" class="inline-block mt-4 bg-gray-800 text-white px-6 py-2 rounded-full hover:bg-gray-700 transition">📧 راسلنا عبر البريد</a>
+    </div>
   </main>
 
-  <!-- تذييل -->
-  <footer class="bg-gray-800 text-white text-center py-4 mt-10">
+  <!-- التذييل -->
+  <footer class="bg-gray-800 text-white text-center py-4 mt-auto">
     &copy; 2025 مكتبة القصص - أحمد حمدي | <a href="mailto:ahmedhamdy7152@gmail.com" class="underline">ahmedhamdy7152@gmail.com</a>
   </footer>
 </body>

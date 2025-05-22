@@ -1,67 +1,64 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>مكتبة القصص</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الرئيسية - مكتبة القصص</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script>
     function toggleDarkMode() {
       document.documentElement.classList.toggle('dark');
       localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
     }
-    window.onload = function() {
+    window.onload = function () {
       if (localStorage.getItem('theme') === 'dark') {
         document.documentElement.classList.add('dark');
       }
     }
   </script>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-sans">
-  <!-- الشعار والعنوان -->
-  <header class="bg-gray-800 text-white py-4 shadow-md">
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-sans flex flex-col min-h-screen">
+  <header class="bg-gray-800 text-white py-4">
     <div class="container mx-auto px-4 flex justify-between items-center">
       <h1 class="text-2xl font-bold">📚 مكتبة القصص</h1>
       <button onclick="toggleDarkMode()" class="bg-white text-gray-800 font-semibold py-1 px-4 rounded-full shadow hover:bg-gray-200 transition">الوضع الليلي</button>
     </div>
   </header>
 
-  <!-- روابط التنقل -->
-  <nav class="bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white py-3 px-4 flex gap-6 justify-center text-lg font-medium">
-    <a href="index.html" class="hover:underline flex items-center gap-2"><span class="bg-white dark:bg-gray-700 p-2 rounded-full">🏠</span> الرئيسية</a>
-    <a href="about.html" class="hover:underline flex items-center gap-2"><span class="bg-white dark:bg-gray-700 p-2 rounded-full">👤</span> من نحن</a>
-    <a href="contact.html" class="hover:underline flex items-center gap-2"><span class="bg-white dark:bg-gray-700 p-2 rounded-full">✉️</span> تواصل معنا</a>
+  <nav class="bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white py-2 px-4 flex gap-4 justify-center">
+    <a href="index.html" class="hover:underline flex items-center gap-1">
+      <span class="bg-white dark:bg-gray-700 p-2 rounded-full">🏠</span> الرئيسية
+    </a>
+    <a href="about.html" class="hover:underline flex items-center gap-1">
+      <span class="bg-white dark:bg-gray-700 p-2 rounded-full">👤</span> من نحن
+    </a>
+    <a href="contact.html" class="hover:underline flex items-center gap-1">
+      <span class="bg-white dark:bg-gray-700 p-2 rounded-full">✉️</span> تواصل معنا
+    </a>
   </nav>
 
-  <!-- المحتوى الرئيسي -->
-  <main class="container mx-auto p-6 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-    <!-- مثال قصة مضافة -->
-    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
-      <img src="images/zikola.jpg" alt="أرض زيكولا" class="w-full h-60 object-cover">
-      <div class="p-4">
-        <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">أرض زيكولا - الجزء الأول</h3>
-        <p class="text-gray-700 dark:text-gray-300 mb-3">رحلة إلى أرض تُحسب فيها الكلمات بدل النقود... رواية خيالية ممتعة!</p>
-        <a href="stories/zikola.pdf" class="inline-block text-blue-600 dark:text-blue-400 underline font-semibold">📥 تحميل القصة PDF</a>
-        <p class="mt-3 text-sm text-gray-500 dark:text-gray-400">👁️ عدد المشاهدات: <span id="views">127</span></p>
+  <main class="container mx-auto p-4 flex-grow">
+    <h2 class="text-3xl font-bold text-center mb-6">أهلاً بك في مكتبة القصص</h2>
+    <p class="text-center text-lg mb-4">اكتشف مجموعتنا الكبيرة من القصص الشيقة والممتعة التي تناسب جميع الأعمار.</p>
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2">قصة اليوم</h3>
+        <p class="text-sm">قصة مشوقة نأخذك فيها في رحلة إلى عالم من الخيال والمغامرات الشيقة...</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-4 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2">القصص المضافة حديثاً</h3>
+        <ul class="list-disc list-inside text-sm">
+          <li>رحلة في الغابة</li>
+          <li>الكنز المفقود</li>
+          <li>صديق القمر</li>
+        </ul>
       </div>
     </div>
-    <!-- أضف المزيد من القصص هنا -->
   </main>
 
-  <!-- تذييل -->
-  <footer class="bg-gray-800 text-white text-center py-6 mt-10 shadow-inner">
+  <footer class="bg-gray-800 text-white text-center py-4 mt-auto">
     &copy; 2025 مكتبة القصص - أحمد حمدي | 
-    <a href="mailto:ahmedhamdy7152@gmail.com" class="underline hover:text-gray-300">ahmedhamdy7152@gmail.com</a>
+    <a href="mailto:ahmedhamdy7152@gmail.com" class="underline">ahmedhamdy7152@gmail.com</a>
   </footer>
-
-  <script>
-    // محاكاة زيادة عدد المشاهدات
-    document.addEventListener('DOMContentLoaded', function() {
-      let views = localStorage.getItem('views') || 127;
-      views++;
-      localStorage.setItem('views', views);
-      document.getElementById('views').textContent = views;
-    });
-  </script>
 </body>
 </html>
